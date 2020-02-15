@@ -1,24 +1,46 @@
 package Quiz;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Checkbox extends Question {
 
-    private ArrayList<String> answer = new ArrayList<>();
+    private String answerSet;
+    private List<String> answerOptions = new ArrayList<>();
 
-    public Checkbox(String questionName, ArrayList<String> answer) {
+    public Checkbox(String questionName, ArrayList<String> answerOptions, String answerSet) {
         super(questionName);
-        this.answer = answer;
+        this.answerOptions = answerOptions;
+        this.answerSet = answerSet;
     }
 
-    public boolean evaluator(ArrayList<String> response) {
-        for (String each : answer) {
-            for (String item : response) {
-                if (each.equals(item)) {
+    public boolean evaluateAnswer(String userResponse) {
+        int correct = 0;
+        int expectedCorrect = 0;
 
+        char[] lowerCaseUserResponse = userResponse.toLowerCase().toCharArray();
+        char[] lowerCaseAnswerSet = answerSet.toLowerCase().toCharArray();
+
+
+        for (char answerEntry : lowerCaseAnswerSet) {
+            //checks for letter to skip commas, etc
+            if (Character.isLetter(answerEntry)) {
+                expectedCorrect++;
+
+                for (char userEntry : lowerCaseUserResponse) {
+
+                    if (Character.isLetter(userEntry)) {
+                        if (userEntry == answerEntry) {
+                            correct++;
+                        }
+                    }
                 }
             }
         }
-
+        if (correct == expectedCorrect) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

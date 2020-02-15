@@ -8,6 +8,5 @@ public abstract class Question {
         this.questionName = questionName;
     }
 
-    public abstract boolean evaluator(String response);
 
 }

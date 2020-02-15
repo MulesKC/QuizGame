@@ -6,4 +6,11 @@ public class TrueOrFalse extends Question {
     public TrueOrFalse(String questionName, boolean answer) {
         super(questionName);
     }
+
+    public boolean evaluateAnswer(String userResponse) {
+        if (userResponse.toLowerCase() == "a") {
+            return true;
+        }
+        return false;
+    }
 }
