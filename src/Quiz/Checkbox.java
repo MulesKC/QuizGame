@@ -43,4 +43,10 @@ public class Checkbox extends Question {
             return false;
         }
     }
+
+    @Override
+    public void askQuestion() {
+
+    }
+
 }

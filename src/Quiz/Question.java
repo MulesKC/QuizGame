@@ -8,5 +8,5 @@ public abstract class Question {
         this.questionName = questionName;
     }
 
-
+    public abstract void askQuestion();
 }

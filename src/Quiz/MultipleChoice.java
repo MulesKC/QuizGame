@@ -19,4 +19,10 @@ public class MultipleChoice extends Question {
         if (userResponse == answer) { return true; }
         return false;
     }
+
+    @Override
+    public void askQuestion() {
+
+    }
+
 }

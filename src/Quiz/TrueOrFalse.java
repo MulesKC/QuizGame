@@ -5,6 +5,7 @@ public class TrueOrFalse extends Question {
 
     public TrueOrFalse(String questionName, boolean answer) {
         super(questionName);
+        this.answer = answer;
     }
 
     public boolean evaluateAnswer(String userResponse) {
@@ -12,5 +13,10 @@ public class TrueOrFalse extends Question {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public void askQuestion() {
+
     }
 }
