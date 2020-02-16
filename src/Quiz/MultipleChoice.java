@@ -32,4 +32,11 @@ public class MultipleChoice extends Question {
         }
     }
 
+    public String getAnswer() {
+        return answer;
+    }
+
+    public List<String> getAnswerOptions() {
+        return answerOptions;
+    }
 }

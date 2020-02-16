@@ -75,5 +75,11 @@ public class Checkbox extends Question {
         }
     }
 
+    public String getAnswerSet() {
+        return answerSet;
+    }
 
+    public List<String> getAnswerOptions() {
+        return answerOptions;
+    }
 }

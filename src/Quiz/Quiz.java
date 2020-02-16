@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Quiz {
-    List<Question> quizQuestions = new ArrayList<>();
+    private List<Question> quizQuestions = new ArrayList<>();
 
     public void addQuestion(Question newQuestion) {
         boolean isAlreadyAQuestion = false;

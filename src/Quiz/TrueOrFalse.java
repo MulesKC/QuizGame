@@ -24,4 +24,8 @@ public class TrueOrFalse extends Question {
         System.out.println("True or False. " + this.questionText + "\n");
         System.out.println("A. True" + "\n" + "B. False");
     }
+
+    public boolean isAnswer() {
+        return answer;
+    }
 }
